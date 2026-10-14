@@ -1,0 +1,9 @@
+/* Remove max-width constraint from content column */
+.bd-main .bd-content .bd-article-container {
+  max-width: 100% !important;
+}
+
+/* Stretch raw-HTML iframes to full width */
+iframe[id$="-frame"] {
+  width: 100% !important;
+}

@@ -1,0 +1,38 @@
+title: "AI for Engineering: In-Browser Lab Demo"
+author: "Jim Ashe"
+logo: ""
+
+execute:
+  execute_notebooks: "off"   # JupyterLite handles live execution; build is static
+
+html:
+  use_repository_button: true
+  use_issues_button: false
+  home_page_in_navbar: false
+  extra_navbar: ""
+  extra_css:
+    - _static/custom.css
+
+launch_buttons:
+  jupyterlite: true
+  notebook_interface: "jupyterlab"
+
+repository:
+  url: https://github.com/ashejim/engineering-ai-lab-demo
+  branch: main
+  path_to_book: "."
+
+sphinx:
+  extra_extensions:
+    - jupyterlite_sphinx
+  config:
+    jupyterlite_contents:
+      - content/
+      - lab/lab_pinn.ipynb
+      - bo/bo_planning.ipynb
+    html_show_sourcelink: false
+    html_sidebars:
+      "lab/intro": []
+      "bo/intro": []
+    html_theme_options:
+      show_toc_level: 0
